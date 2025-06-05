@@ -24,7 +24,16 @@ int main() {
         tabuleiro[i][5] = NAVIO;
     }
 
- 
+    // NAVIO DIAGONAL PRINCIPAL (↘) começando da posição [0][0]
+    for (int i = 0; i < TAMANHO_NAVIO; i++) {
+        tabuleiro[i][i] = NAVIO;
+    }
+
+    // NAVIO DIAGONAL SECUNDÁRIA (↙) começando da posição [0][9]
+    for (int i = 0; i < TAMANHO_NAVIO; i++) {
+        tabuleiro[i][9 - i] = NAVIO;
+    }
+
     // Mostra o tabuleiro na tela
     printf("TABULEIRO BATALHA NAVAL (3 = NAVIO, 0 = ÁGUA)\n\n");
 
